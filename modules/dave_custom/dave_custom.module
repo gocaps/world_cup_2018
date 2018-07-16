@@ -1,0 +1,93 @@
+<?php
+
+function computed_field_field_total_points_compute(&$entity_field, $entity_type, $entity, $field, $instance, $langcode, $items) {
+
+	# TEAMS
+	$nid = $entity->field_team_group_1[LANGUAGE_NONE][0]['nid'];
+	$t1 = node_load($nid);
+	$v1 = $t1->field_points[LANGUAGE_NONE][0]['value'];
+
+	$nid = $entity->field_team_group_2[LANGUAGE_NONE][0]['nid'];
+	$t2 = node_load($nid);
+	$v2 = $t2->field_points[LANGUAGE_NONE][0]['value'];
+
+	$nid = $entity->field_team_group_3[LANGUAGE_NONE][0]['nid'];
+	$t3 = node_load($nid);
+	$v3 = $t3->field_points[LANGUAGE_NONE][0]['value'];
+
+	$nid = $entity->field_team_group_4[LANGUAGE_NONE][0]['nid'];
+	$t4 = node_load($nid);
+	$v4 = $t4->field_points[LANGUAGE_NONE][0]['value'];
+
+	$nid = $entity->field_team_group_5[LANGUAGE_NONE][0]['nid'];
+	$t5 = node_load($nid);
+	$v5 = $t5->field_points[LANGUAGE_NONE][0]['value'];
+
+	$nid = $entity->field_team_group_6[LANGUAGE_NONE][0]['nid'];
+	$t6 = node_load($nid);
+	$v6 = $t6->field_points[LANGUAGE_NONE][0]['value'];
+
+	$nid = $entity->field_team_group_7[LANGUAGE_NONE][0]['nid'];
+	$t7 = node_load($nid);
+	$v7 = $t7->field_points[LANGUAGE_NONE][0]['value'];
+
+	$nid = $entity->field_team_group_8[LANGUAGE_NONE][0]['nid'];
+	$t8 = node_load($nid);
+	$v8 = $t8->field_points[LANGUAGE_NONE][0]['value'];
+
+	$nid = $entity->field_team_group_9[LANGUAGE_NONE][0]['nid'];
+	$t9 = node_load($nid);
+	$v9 = $t9->field_points[LANGUAGE_NONE][0]['value'];
+
+	$nid = $entity->field_team_group_10[LANGUAGE_NONE][0]['nid'];
+	$t10 = node_load($nid);
+	$v10 = $t10->field_points[LANGUAGE_NONE][0]['value'];
+
+	$nid = $entity->field_team_group_11[LANGUAGE_NONE][0]['nid'];
+	$t11 = node_load($nid);
+	$v11 = $t11->field_points[LANGUAGE_NONE][0]['value'];
+
+	# PLAYERS
+	$nid = $entity->field_player_group_1[LANGUAGE_NONE][0]['nid'];
+	$p1 = node_load($nid);
+	$x1 = $p1->field_points_p[LANGUAGE_NONE][0]['value'];
+
+	$nid = $entity->field_player_group_2[LANGUAGE_NONE][0]['nid'];
+	$p2 = node_load($nid);
+	$x2 = $p2->field_points_p[LANGUAGE_NONE][0]['value'];
+
+	$nid = $entity->field_player_group_3[LANGUAGE_NONE][0]['nid'];
+	$p3 = node_load($nid);
+	$x3 = $p3->field_points_p[LANGUAGE_NONE][0]['value'];
+
+	$nid = $entity->field_player_group_4[LANGUAGE_NONE][0]['nid'];
+	$p4 = node_load($nid);
+	$x4 = $p4->field_points_p[LANGUAGE_NONE][0]['value'];
+
+	$nid = $entity->field_player_group_5[LANGUAGE_NONE][0]['nid'];
+	$p5 = node_load($nid);
+	$x5 = $p5->field_points_p[LANGUAGE_NONE][0]['value'];
+
+	$nid = $entity->field_player_group_6[LANGUAGE_NONE][0]['nid'];
+	$p6 = node_load($nid);
+	$x6 = $p6->field_points_p[LANGUAGE_NONE][0]['value'];
+
+	$nid = $entity->field_player_group_7[LANGUAGE_NONE][0]['nid'];
+	$p7 = node_load($nid);
+	$x7 = $p7->field_points_p[LANGUAGE_NONE][0]['value'];
+
+	$nid = $entity->field_player_group_8[LANGUAGE_NONE][0]['nid'];
+	$p8 = node_load($nid);
+	$x8 = $p8->field_points_p[LANGUAGE_NONE][0]['value'];
+
+	$nid = $entity->field_player_group_9[LANGUAGE_NONE][0]['nid'];
+	$p9 = node_load($nid);
+	$x9 = $p9->field_points_p[LANGUAGE_NONE][0]['value'];
+
+	$nid = $entity->field_player_group_10[LANGUAGE_NONE][0]['nid'];
+	$p10 = node_load($nid);
+	$x10 = $p10->field_points_p[LANGUAGE_NONE][0]['value'];
+
+	$entity_field[0]['value'] = ($v1 + $v2 + $v3 + $v4 + $v5 + $v6 + $v7 + $v8 + $v9 + $v10 + $v11 + $x1 + $x2 + $x3 + $x4 + $x5 + $x6 + $x7 + $x8 + $x9 + $x10);
+	
+}
